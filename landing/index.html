@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalyst - Kirim Lebih Cepat, Skala Tanpa Batas</title>
+
+    <!--
+
+    TemplateMo 618 The Catalyst
+
+    https://templatemo.com/tm-618-the-catalyst
+
+    Silver & Acid Light-Mode SaaS Landing Page
+
+    -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="templatemo-catalyst-style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" aria-label="Catalyst Home">
+          <span class="nav-logo-mark">
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M3 8L7 4L13 8L7 12L3 8Z" fill="#111" />
+            </svg>
+          </span>
+          Catalyst
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#metrics">Performa</a></li>
+          <li><a href="#engine">Fitur</a></li>
+          <li><a href="#pricing">Harga</a></li>
+          <li><a href="#faq">Tanya Jawab</a></li>
+        </ul>
+        <div class="nav-cta">
+          <div id="authArea">
+            <button onclick="goLogin()" class="btn-acid">Masuk</button>
+          </div>
+          <p id="userInfo">Belum Masuk</p>
+        </div>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          v4.2 — Sekarang dengan sinkronisasi real-time
+        </div>
+        <h1 class="reveal">
+          Platform analitik yang dibuat untuk
+          <span class="accent-word">kecepatan</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Berhenti menunggu wawasan. Catalyst menyajikan kueri sub-detik pada
+          miliaran baris sehingga tim Anda mengirim keputusan, bukan dashboard.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#pricing" class="btn-acid">
+            Mulai Uji Coba Gratis
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 8H13M13 8L9 4M13 8L9 12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a href="#demoVideo" class="btn-ghost">Tonton Demo</a>
+        </div>
+
+        <!-- Dashboard Mockup -->
+        <div class="hero-dashboard reveal">
+          <div class="dashboard-frame">
+            <div class="dashboard-toolbar">
+              <div class="dashboard-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="dashboard-toolbar-tabs">
+                <span class="active">Ikhtisar</span>
+                <span>Funnel</span>
+                <span>Retensi</span>
+                <span>Pendapatan</span>
+              </div>
+              <div style="width: 50px"></div>
+            </div>
+            <div class="dashboard-body">
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Total Pendapatan</div>
+                <div class="dash-stat-value">$2.4M</div>
+                <div class="dash-stat-change">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 9V3M6 3L3 6M6 3L9 6"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +18.2%
+                </div>
+              </div>
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Pengguna Aktif</div>
+                <div class="dash-stat-value">48,291</div>
+                <div class="dash-stat-change">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 9V3M6 3L3 6M6 3L9 6"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7.4%
+                </div>
+              </div>
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Rata-rata Waktu Kueri</div>
+                <div class="dash-stat-value">42ms</div>
+                <div class="dash-stat-change">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 9V3M6 3L3 6M6 3L9 6"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  -23.5%
+                </div>
+              </div>
+              <div class="dashboard-table-area">
+                <div class="dash-table-header">
+                  <span>Alur Terbaru</span>
+                  <span class="dash-filter">Semua tim ▾</span>
+                </div>
+                <div class="dash-table">
+                  <div class="dash-table-row head">
+                    <div class="dash-cell">Alur</div>
+                    <div class="dash-cell">Peristiwa / jam</div>
+                    <div class="dash-cell">Latensi</div>
+                    <div class="dash-cell">Waktu Aktif</div>
+                    <div class="dash-cell">Status</div>
+                  </div>
+                  <div class="dash-table-row">
+                    <div class="dash-cell dash-cell-name">
+                      <span
+                        class="dash-cell-icon"
+                        style="background: #dcfce7; color: #166534"
+                        >P1</span
+                      >
+                      Alur Checkout
+                    </div>
+                    <div class="dash-cell">1.2M</div>
+                    <div class="dash-cell">34ms</div>
+                    <div class="dash-cell">99.98%</div>
+                    <div class="dash-cell">
+                      <span class="dash-status active">Aktif</span>
+                    </div>
+                  </div>
+                  <div class="dash-table-row">
+                    <div class="dash-cell dash-cell-name">
+                      <span
+                        class="dash-cell-icon"
+                        style="background: #fef3c7; color: #92400e"
+                        >P2</span
+                      >
+                      Onboarding Pengguna
+                    </div>
+                    <div class="dash-cell">847K</div>
+                    <div class="dash-cell">52ms</div>
+                    <div class="dash-cell">99.91%</div>
+                    <div class="dash-cell">
+                      <span class="dash-status pending">Tertunda</span>
+                    </div>
+                  </div>
+                  <div class="dash-table-row">
+                    <div class="dash-cell dash-cell-name">
+                      <span
+                        class="dash-cell-icon"
+                        style="
+                          background: var(--surface);
+                          color: var(--text-muted);
+                        "
+                        >P3</span
+                      >
+                      Pelacak Pendapatan
+                    </div>
+                    <div class="dash-cell">2.1M</div>
+                    <div class="dash-cell">28ms</div>
+                    <div class="dash-cell">99.99%</div>
+                    <div class="dash-cell">
+                      <span class="dash-status active">Aktif</span>
+                    </div>
+                  </div>
+                  <div class="dash-table-row">
+                    <div class="dash-cell dash-cell-name">
+                      <span
+                        class="dash-cell-icon"
+                        style="background: #e0e7ff; color: #3730a3"
+                        >P4</span
+                      >
+                      Eksperimen A/B
+                    </div>
+                    <div class="dash-cell">423K</div>
+                    <div class="dash-cell">61ms</div>
+                    <div class="dash-cell">99.87%</div>
+                    <div class="dash-cell">
+                      <span class="dash-status draft">Draf</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: SPEED METRICS ===== -->
+    <section class="metrics" id="metrics">
+      <div class="container">
+        <p class="metrics-label reveal">Performa yang berbicara sendiri</p>
+        <div class="metrics-grid">
+          <div class="metric-item reveal">
+            <div class="metric-number">
+              <span class="metric-highlight">42</span
+              ><span class="metric-unit">ms</span>
+            </div>
+            <p class="metric-desc">
+              Rata-rata respons kueri pada dataset &gt;10 miliar baris
+            </p>
+          </div>
+          <div class="metric-item reveal">
+            <div class="metric-number">
+              99.99<span class="metric-unit">%</span>
+            </div>
+            <p class="metric-desc">
+              Jaminan SLA waktu aktif untuk semua pelanggan enterprise
+            </p>
+          </div>
+          <div class="metric-item reveal">
+            <div class="metric-number">
+              10<span class="metric-unit">x</span>
+            </div>
+            <p class="metric-desc">
+              10x lebih cepat daripada gudang lama dengan biaya sepersepuluh
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: THE ENGINE — BENTO GRID ===== -->
+    <section class="engine" id="engine">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Mesin</p>
+          <h2 class="section-title">
+            Semua yang sebenarnya dibutuhkan tim data Anda
+          </h2>
+        </div>
+        <div class="bento-grid">
+          <div class="card bento-card reveal">
+            <div class="bento-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 3v18h18" />
+                <path d="M7 16l4-8 4 4 4-6" />
+              </svg>
+            </div>
+            <h3>Analitik Real-Time</h3>
+            <p>
+              Alirkan, transformasikan, dan visualisasikan data segera setelah
+              tiba. Tanpa batching, tanpa menunggu, tanpa dashboard usang.
+            </p>
+            <div class="bento-card-visual">
+              <div class="mini-bars">
+                <div class="mini-bar" style="height: 35%"></div>
+                <div class="mini-bar" style="height: 55%"></div>
+                <div class="mini-bar" style="height: 40%"></div>
+                <div class="mini-bar highlight" style="height: 80%"></div>
+                <div class="mini-bar" style="height: 60%"></div>
+                <div class="mini-bar" style="height: 45%"></div>
+                <div class="mini-bar highlight" style="height: 95%"></div>
+                <div class="mini-bar" style="height: 70%"></div>
+                <div class="mini-bar" style="height: 50%"></div>
+                <div class="mini-bar" style="height: 65%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card bento-card reveal">
+            <div class="bento-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <h3>Orkestrasi Alur</h3>
+            <p>
+              Bangun alur data tahan-gagal dengan drag-and-drop visual. Retry
+              otomatis, antrean dead-letter, dan observabilitas penuh bawaan.
+            </p>
+            <div class="bento-card-visual">
+              <div class="mini-pipeline">
+                <div class="mini-pipeline-node">Ingest</div>
+                <span class="mini-pipeline-arrow">→</span>
+                <div class="mini-pipeline-node">Transform</div>
+                <span class="mini-pipeline-arrow">→</span>
+                <div class="mini-pipeline-node">Deliver</div>
+              </div>
+            </div>
+          </div>
+          <div class="card bento-card reveal">
+            <div class="bento-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 18l6-6-6-6" />
+                <path d="M8 6l-6 6 6 6" />
+              </svg>
+            </div>
+            <h3>Antarmuka Berbasis SQL</h3>
+            <p>
+              Tulis SQL standar terhadap sumber manapun. Auto-completion,
+              kontrol versi, dan pengeditan kolaboratif tersedia.
+            </p>
+            <div class="bento-card-visual">
+              <div class="mini-code">
+                <span class="keyword">SELECT</span> user_id,
+                <span class="keyword">COUNT</span>(*)<br />
+                <span class="keyword">FROM</span> events<br />
+                <span class="keyword">WHERE</span> ts &gt;
+                <span class="string">'2026-01'</span><br />
+                <span class="keyword">GROUP BY</span> 1
+                <span class="comment">-- 42ms ⚡</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: PRICING ===== -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Harga</p>
+          <h2 class="section-title">Harga sederhana dan transparan</h2>
+        </div>
+        <div class="toggle-wrap reveal">
+          <div class="toggle-container">
+            <button class="toggle-btn" data-plan="monthly" id="toggleMonthly">
+              Bulanan
+            </button>
+            <button
+              class="toggle-btn active"
+              data-plan="yearly"
+              id="toggleYearly"
+            >
+              Tahunan
+            </button>
+          </div>
+          <span class="toggle-save visible" id="toggleSave">Hemat 25%</span>
+        </div>
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <div class="card pricing-card reveal">
+            <div class="pricing-plan-name">Pemula</div>
+            <div class="pricing-plan-desc">
+              Untuk tim kecil yang baru memulai
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-value" data-monthly="30" data-yearly="22"
+                >22</span
+              >
+            </div>
+            <p class="pricing-period">per pengguna / bulan</p>
+            <p
+              class="pricing-billed yearly-active"
+              data-monthly="Billed monthly"
+              data-yearly="$264 billed annually"
+            >
+              $264 ditagih tahunan
+            </p>
+            <a href="#" class="btn-ghost">Mulai</a>
+            <ul class="pricing-features">
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Hingga 5 anggota tim
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                1 miliar peristiwa / bulan
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Retensi data 7 hari
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Dukungan komunitas
+              </li>
+            </ul>
+          </div>
+          <!-- Pro -->
+          <div class="card pricing-card featured reveal">
+            <div class="pricing-plan-name">Pro</div>
+            <div class="pricing-plan-desc">
+              Untuk tim data yang sedang berkembang
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-value" data-monthly="100" data-yearly="75"
+                >75</span
+              >
+            </div>
+            <p class="pricing-period">per pengguna / bulan</p>
+            <p
+              class="pricing-billed yearly-active"
+              data-monthly="Billed monthly"
+              data-yearly="$900 billed annually"
+            >
+              $900 ditagih tahunan
+            </p>
+            <a href="#" class="btn-acid">Mulai</a>
+            <ul class="pricing-features">
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Anggota tim tanpa batas
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                50 miliar peristiwa / bulan
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Retensi data tanpa batas
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Dukungan prioritas + SLA
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                SSO &amp; log audit
+              </li>
+            </ul>
+          </div>
+          <!-- Enterprise -->
+          <div class="card pricing-card reveal">
+            <div class="pricing-plan-name">Perusahaan</div>
+            <div class="pricing-plan-desc">Untuk penerapan yang kritis</div>
+            <div class="pricing-amount">
+              <span class="pricing-currency">$</span>
+              <span class="pricing-value" data-monthly="500" data-yearly="375"
+                >375</span
+              >
+            </div>
+            <p class="pricing-period">mulai dari / bulan</p>
+            <p
+              class="pricing-billed yearly-active"
+              data-monthly="Billed monthly"
+              data-yearly="$4,500 billed annually"
+            >
+              $4,500 ditagih tahunan
+            </p>
+            <a href="#" class="btn-ghost">Hubungi Penjualan</a>
+            <ul class="pricing-features">
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Semua di Pro
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Infrastruktur khusus
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Integrasi khusus
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Dukungan khusus 24/7
+              </li>
+              <li>
+                <svg viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M4 9l3.5 3.5L14 5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Jaminan SLA 99.99%
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: LOCASI ===== -->
+    <section class="location" id="location">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Lokasi</p>
+          <h2 class="section-title">Kunjungi kantor tim kami</h2>
+        </div>
+        <div
+          class="location-grid reveal"
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2rem;
+            align-items: start;
+          "
+        >
+          <div>
+            <p>
+              Tim Catalyst siap membantu Anda mempercepat proyek data dari
+              kantor pusat kami. Datang dan lihat bagaimana kami menghubungkan
+              data dengan keputusan bisnis yang lebih cepat.
+            </p>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                margin: 1.25rem 0;
+                line-height: 1.8;
+              "
+            >
+              <li><strong>Alamat:</strong> Jl. Example No. 123, Jakarta</li>
+              <li><strong>Telepon:</strong> +62 21 1234 5678</li>
+              <li><strong>Email:</strong> info@catalyst.co.id</li>
+            </ul>
+          </div>
+          <div style="min-height: 300px">
+            <iframe
+              width="100%"
+              height="100%"
+              style="border: 0; min-height: 320px"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6110321295938!2d106.81666631529339!3d-6.200000095403452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5edc48ca45f%3A0xab2f5b5d7acef99f!2sMonas!5e0!3m2!1sen!2sid!4v1696111200000!5m2!1sen!2sid"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Tanya Jawab</p>
+          <h2 class="section-title">Pertanyaan umum, jawaban langsung</h2>
+        </div>
+        <div class="faq-controls reveal">
+          <button class="faq-ctrl-btn" id="faqExpandAll">Perluas Semua</button>
+          <button class="faq-ctrl-btn" id="faqCollapseAll">Tutup Semua</button>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Berapa lama uji coba gratis berlangsung?
+              <span class="faq-icon"
+                ><svg viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M7 1v12M1 7h12"
+                    stroke="#111"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Setiap paket menyertakan uji coba gratis 14 hari dengan akses
+                penuh ke semua fitur. Tidak diperlukan kartu kredit untuk
+                memulai. Di akhir uji coba, Anda dapat memilih paket atau
+                mengekspor data Anda.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Dapatkah saya mengganti paket nanti?
+              <span class="faq-icon"
+                ><svg viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M7 1v12M1 7h12"
+                    stroke="#111"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Ya. Tingkatkan atau turunkan kapan saja dari pengaturan akun
+                Anda. Saat meningkatkan, Anda hanya membayar selisih prorata.
+                Saat menurunkan, saldo tersisa diterapkan sebagai kredit untuk
+                faktur berikutnya.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Sumber data apa yang didukung?
+              <span class="faq-icon"
+                ><svg viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M7 1v12M1 7h12"
+                    stroke="#111"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Catalyst terhubung ke 50+ sumber data langsung, termasuk
+                PostgreSQL, MySQL, BigQuery, Snowflake, Redshift, S3, Kafka, dan
+                sebagian besar REST API populer. Konektor kustom tersedia pada
+                paket Perusahaan.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Apakah data saya aman?
+              <span class="faq-icon"
+                ><svg viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M7 1v12M1 7h12"
+                    stroke="#111"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Tentu. Semua data dienkripsi saat disimpan (AES-256) dan saat
+                transit (TLS 1.3). Kami memiliki sertifikasi SOC 2 Type II dan
+                mematuhi GDPR. Pelanggan Perusahaan juga mendapatkan
+                infrastruktur khusus dengan VPC peering dan kunci enkripsi
+                khusus.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Apakah Anda menawarkan dukungan onboarding?
+              <span class="faq-icon"
+                ><svg viewBox="0 0 14 14" fill="none">
+                  <path
+                    d="M7 1v12M1 7h12"
+                    stroke="#111"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  /></svg
+              ></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Pelanggan Pro mendapat akses ke tim onboarding selama 30 hari
+                pertama. Pelanggan Perusahaan menerima engineer solusi khusus
+                untuk implementasi penuh. Semua paket menyertakan akses ke
+                dokumentasi, tutorial, dan forum komunitas kami.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: CTA BANNER ===== -->
+    <section id="demoVideo" class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner reveal">
+          <iframe
+            width="814"
+            height="458"
+            src="https://www.youtube.com/embed/115amzVdV44"
+            title="How To Fix a Water Damaged Laptop"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: FOOTER ===== -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="#" class="nav-logo" aria-label="Catalyst Home">
+              <span class="nav-logo-mark">
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 8L7 4L13 8L7 12L3 8Z" fill="#111" />
+                </svg>
+              </span>
+              Catalyst
+            </a>
+            <p class="footer-brand-desc">
+              Platform analitik yang dibuat untuk kecepatan. Kueri sub-detik,
+              alur real-time, dan skala tanpa batas.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Sumber Daya</h4>
+            <ul class="footer-links">
+              <li><a href="#">Dokumentasi</a></li>
+              <li><a href="#">Referensi API</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">Halaman Status</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Dukungan</h4>
+            <ul class="footer-links">
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">Forum Komunitas</a></li>
+              <li><a href="#">Hubungi Kami</a></li>
+              <li><a href="#">Status Sistem</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Terhubung</h4>
+            <ul class="footer-links">
+              <li><a href="#">Twitter / X</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; 2026 Catalyst Inc. Semua hak dilindungi. Desain:
+            <a
+              href="https://templatemo.com/tm-618-the-catalyst"
+              target="_blank"
+              rel="nofollow"
+              >TemplateMo</a
+            >
+          </p>
+          <ul class="footer-bottom-links">
+            <li><a href="#">Privasi</a></li>
+            <li><a href="#">Ketentuan</a></li>
+            <li><a href="#">Cookie</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Template JS -->
+    <script src="templatemo-catalyst-script.js"></script>
+    <script src="../login/js/welcome.js"></script>
+  </body>
+</html>
